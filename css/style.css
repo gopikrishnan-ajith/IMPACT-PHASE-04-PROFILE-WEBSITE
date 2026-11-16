@@ -1,0 +1,284 @@
+
+/* =====================================
+   GLOBAL RESET
+===================================== */
+
+* {                     /* universal selector  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    transition: background-color var(--transition-speed),
+                color var(--transition-speed);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 10px var(--color-shadow);
+}
+
+.navbar {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: var(--spacing-md) var(--spacing-lg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: calc(var(--spacing-xl) * 2) var(--spacing-lg)
+             var(--spacing-xl);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.hero-content {
+    flex: 1;
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-label {
+    color: var(--color-accent);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.15;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero h1 span {
+    color: var(--color-primary-light);
+}
+
+.hero h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-description {
+    max-width: 550px;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+
+/* =====================================
+   HERO BUTTON
+===================================== */
+
+.hero-button {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+
+    transition: transform var(--transition-speed),
+                box-shadow var(--transition-speed);
+}
+
+.hero-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px var(--color-shadow);
+}
+
+
+/* =====================================
+   PROFILE IMAGE PLACEHOLDER
+===================================== */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-placeholder {
+    width: 320px;
+    height: 380px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg-secondary);
+    border: 2px solid var(--color-primary-light);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--color-accent);
+
+    box-shadow: 0 10px 30px var(--color-shadow);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
+    border-top: 1px solid var(--color-border);
+}
+
+
+/* =====================================
+   ANIMATIONS
+===================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: var(--spacing-md);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        flex-direction: column;
+        gap: var(--spacing-md);
+
+        padding: var(--spacing-lg);
+        background-color: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding-top: calc(var(--spacing-xl) * 3);
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .image-placeholder {
+        width: 240px;
+        height: 280px;
+    }
+}
