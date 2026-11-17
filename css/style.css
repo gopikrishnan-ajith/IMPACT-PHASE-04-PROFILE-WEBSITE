@@ -613,13 +613,9 @@ footer {
 /* FAMILY SECTION */
 
 
-.family-section {
-    --family-primary: #8b5e3c;
-    --family-secondary: #d9a679;
-    --family-bg: #fff7ed;
-    --family-card: #ffffff;
-    --family-photo-bg: #f1dfce;
+/* FAMILY SECTION */
 
+.family-section {
     --color-primary: var(--family-primary);
     --color-bg: var(--family-bg);
     --color-bg-card: var(--family-card);
@@ -627,7 +623,6 @@ footer {
     background: var(--family-bg);
     padding: 5rem 2rem;
 }
-
 
 .family-container {
     max-width: var(--max-width);
@@ -700,7 +695,7 @@ footer {
     -webkit-backface-visibility: hidden;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px var(--color-shadow);
     text-align: center;
 }
 
@@ -754,7 +749,6 @@ footer {
     color: var(--family-card);
 }
 
-
 .family-group {
     margin-bottom: var(--spacing-lg);
 }
@@ -781,8 +775,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.35);
-    color: white;
+    background: var(--color-overlay);
+    color: var(--color-overlay-text);
     text-align: center;
 }
 
@@ -792,9 +786,8 @@ footer {
 }
 
 .family-group-overlay p {
-    color: white;
+    color: var(--color-overlay-text);
 }
-
 
 @media (max-width: 900px) {
     .family-grid {

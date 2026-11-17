@@ -51,4 +51,7 @@
     --family-bg: #fff7ed;
     --family-card: #ffffff;
     --family-photo-bg: #f1dfce;
+
+    --color-overlay: rgba(0, 0, 0, 0.35);
+    --color-overlay-text: #ffffff;
 }
