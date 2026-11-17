@@ -609,3 +609,201 @@ footer {
     }
 
 }
+
+/* FAMILY SECTION */
+
+
+.family-section {
+    --family-primary: #8b5e3c;
+    --family-secondary: #d9a679;
+    --family-bg: #fff7ed;
+    --family-card: #ffffff;
+    --family-photo-bg: #f1dfce;
+
+    --color-primary: var(--family-primary);
+    --color-bg: var(--family-bg);
+    --color-bg-card: var(--family-card);
+
+    background: var(--family-bg);
+    padding: 5rem 2rem;
+}
+
+
+.family-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.family-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.family-heading h2 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h2);
+    color: var(--family-primary);
+    margin: 0.5rem 0;
+}
+
+.family-heading p {
+    color: var(--color-text-secondary);
+}
+
+.family-banner {
+    background: linear-gradient(120deg, var(--family-primary), var(--family-secondary));
+    color: var(--color-text-inverse);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.family-banner h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.family-card {
+    height: 360px;
+    perspective: 1000px;
+    cursor: pointer;
+    outline-offset: 5px;
+}
+
+.family-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.family-card:hover .family-card-inner,
+.family-card:focus .family-card-inner,
+.family-card:focus-within .family-card-inner {
+    transform: rotateY(180deg);
+}
+
+.family-card-front,
+.family-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.family-card-front {
+    background: var(--family-card);
+    padding: 1.5rem;
+}
+
+.family-photo {
+    height: 220px;
+    background: var(--family-photo-bg);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.family-card-front h3,
+.family-card-back h3 {
+    color: var(--family-primary);
+    margin-bottom: 0.4rem;
+}
+
+.family-card-front p,
+.family-card-back p {
+    color: var(--color-text-secondary);
+}
+
+.family-card-front span {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--family-primary);
+}
+
+.family-card-back {
+    background: var(--family-primary);
+    color: var(--family-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transform: rotateY(180deg);
+}
+
+.family-card-back h3,
+.family-card-back p {
+    color: var(--family-card);
+}
+
+
+.family-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.family-group-photo {
+    position: relative;
+    max-width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.family-group-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.family-group-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    text-align: center;
+}
+
+.family-group-overlay h3 {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+}
+
+.family-group-overlay p {
+    color: white;
+}
+
+
+@media (max-width: 900px) {
+    .family-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .family-grid {
+        grid-template-columns: 1fr;
+    }
+}
