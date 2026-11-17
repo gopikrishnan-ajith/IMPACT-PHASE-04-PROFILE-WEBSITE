@@ -96,4 +96,13 @@ timelineItems.forEach(function (item) {
     observer.observe(item);
 
 });
+const backToTopButton = document.getElementById("back-to-top");
 
+if (backToTopButton) {
+    backToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
