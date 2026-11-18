@@ -1,30 +1,30 @@
 
 /* =====================================
    THEME CONFIGURATION
-   Theme:  Dark
+   Theme: Cyberpunk
 ===================================== */
 
 :root {
-
+    
     /* Primary Colors */
-    --color-primary: #111827;
-    --color-primary-light: #22d3ee;
-    --color-primary-dark: #030712;
+    --color-primary: #211033;
+    --color-primary-light: #00f5ff;
+    --color-primary-dark: #090014;
 
     /* Background Colors */
-    --color-bg: #090d16;
-    --color-bg-secondary: #111827;
-    --color-bg-card: #1a2232;
+    --color-bg: #090014;
+    --color-bg-secondary: #160d24;
+    --color-bg-card: #211033;
 
     /* Text Colors */
-    --color-text: #f9fafb;
-    --color-text-secondary: #cbd5e1;
-    --color-text-inverse: #ffffff;
+    --color-text: #ffffff;
+    --color-text-secondary: #d8c8e8;
+    --color-text-inverse: #090014;
 
     /* Accent & Borders */
-    --color-accent: #22d3ee;
-    --color-border: #374151;
-    --color-shadow: rgba(0, 0, 0, 0.5);
+    --color-accent: #ff2bd6;
+    --color-border: #693a82;
+    --color-shadow: rgba(255, 43, 214, 0.2);
 
     /* Typography */
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,13 +46,13 @@
     --transition-speed: 0.3s;
 
     /* Family Section */
-    --family-primary: #22d3ee;
-    --family-secondary: #67e8f9;
-    --family-bg: #111827;
-    --family-card: #1a2232;
-    --family-photo-bg: #263449;
+    --family-primary: #ff2bd6;
+    --family-secondary: #00f5ff;
+    --family-bg: #160d24;
+    --family-card: #211033;
+    --family-photo-bg: #302044;
 
     /* Overlay */
-    --color-overlay: rgba(0, 0, 0, 0.65);
+    --color-overlay: rgba(9, 0, 20, 0.75);
     --color-overlay-text: #ffffff;
 }
