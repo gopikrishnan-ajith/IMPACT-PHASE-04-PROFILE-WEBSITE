@@ -1,30 +1,30 @@
 
 /* =====================================
    THEME CONFIGURATION
-   Default Theme: Light
+   Theme:  Dark
 ===================================== */
 
 :root {
 
     /* Primary Colors */
-    --color-primary: #2c3e50;
-    --color-primary-light: #3498db;
-    --color-primary-dark: #1a252f;
+    --color-primary: #111827;
+    --color-primary-light: #22d3ee;
+    --color-primary-dark: #030712;
 
     /* Background Colors */
-    --color-bg: #ffffff;
-    --color-bg-secondary: #f8f9fa;
-    --color-bg-card: #ffffff;
+    --color-bg: #090d16;
+    --color-bg-secondary: #111827;
+    --color-bg-card: #1a2232;
 
     /* Text Colors */
-    --color-text: #2c3e50;
-    --color-text-secondary: #6c757d;
+    --color-text: #f9fafb;
+    --color-text-secondary: #cbd5e1;
     --color-text-inverse: #ffffff;
 
     /* Accent & Borders */
-    --color-accent: #e74c3c;
-    --color-border: #dee2e6;
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-accent: #22d3ee;
+    --color-border: #374151;
+    --color-shadow: rgba(0, 0, 0, 0.5);
 
     /* Typography */
     --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -45,13 +45,14 @@
     --border-radius: 8px;
     --transition-speed: 0.3s;
 
-    /* Family Section Warm Palette */
-    --family-primary: #8b5e3c;
-    --family-secondary: #d9a679;
-    --family-bg: #fff7ed;
-    --family-card: #ffffff;
-    --family-photo-bg: #f1dfce;
+    /* Family Section */
+    --family-primary: #22d3ee;
+    --family-secondary: #67e8f9;
+    --family-bg: #111827;
+    --family-card: #1a2232;
+    --family-photo-bg: #263449;
 
-    --color-overlay: rgba(0, 0, 0, 0.35);
+    /* Overlay */
+    --color-overlay: rgba(0, 0, 0, 0.65);
     --color-overlay-text: #ffffff;
 }
