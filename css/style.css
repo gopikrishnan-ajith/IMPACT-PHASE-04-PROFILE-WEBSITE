@@ -342,12 +342,6 @@ footer {
 }
 
 
-/* Timeline items */
-
-.timeline-item {
-    position: relative;
-    margin-bottom: var(--spacing-xl);
-}
 
 
 /* Timeline dots */
@@ -441,6 +435,8 @@ footer {
 /* Scroll animation */
 
 .timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease,
@@ -521,17 +517,7 @@ footer {
     box-shadow: 0 12px 25px var(--color-shadow);
 }
 
-/* Image Area */
 
-.interest-image {
-    height: 180px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: var(--color-bg-secondary);
-}
 
 .interest-image span {
     font-size: 4rem;
@@ -573,7 +559,11 @@ footer {
 }
 .interest-image {
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
+    background-color: var(--color-bg-secondary);
 }
 
 .interest-image img {
